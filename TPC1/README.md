@@ -1,4 +1,4 @@
-Expressões Regulares
+Expressões Regulares (String Binária sem subsequência "011")
 
 João Mendes, pg60226
 
