@@ -2,7 +2,7 @@ import re
 import sys
 
 
-cabe=re.compile(r'(?P<cabeçalho>^(#*)\s*(.*))')
+cabe=re.compile(r'(?P<cabeçalho>(#+)\s*(.*))')
 im=re.compile(r'(?P<img>!\[(.*)\]\((.*)\))')
 bold=re.compile(r'(?P<bold>\*\*(.*)\*\*)')
 ita=re.compile(r'(?P<ita>\*(.*)\*)')
