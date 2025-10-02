@@ -1,6 +1,6 @@
-Expressões Regulares (String Binária sem subsequência "011")
+### Expressões Regulares (String Binária sem subsequência "011")
 
-Resolução:https://github.com/jlfmendes32/PLC2025/blob/main/TPC1/resolução.txt
+<a href="https://github.com/jlfmendes32/PLC2025/blob/main/TPC1/resolução.txt">Resolução<a/>
 
 Resumo: A ideia assenta no facto de não poder haver dois '1's seguidos a um '0' na palavra binária, logo a palavra pode começar com um número qualquer de '1's seguidos. A partir do primeiro '0' só pode haver no máximo um '1' a seguir a esse dígito.
 
