@@ -2,7 +2,6 @@ import re
 import sys
 
 
-#Cabeçalho
 cabe=re.compile(r'(?P<cabeçalho>^(#*)\s*(.*))')
 im=re.compile(r'(?P<img>!\[(.*)\]\((.*)\))')
 bold=re.compile(r'(?P<bold>\*\*(.*)\*\*)')
@@ -38,7 +37,6 @@ def converte(t):
     return t
 
 def read_input():
-    # if a filename was passed, read that file; otherwise read stdin
     if len(sys.argv) > 1:
         path = sys.argv[1]
         with open(path, 'r', encoding='utf-8') as f:
