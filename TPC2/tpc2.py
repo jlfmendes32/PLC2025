@@ -10,10 +10,14 @@ ita=re.compile(r'(?P<ita>\*(.*)\*)')
 lik=re.compile(r'(?P<link>\[(.*)\]\((.*)\))')
 ListaNum=re.compile(r'(?P<lista>((\d+\.)\s*(.+)+))')
 
+def cabesub(m):
+    nh=len(m.group(2))
+    return rf"<h{nh}>{m.group(3)}</h{nh}>"
+
+
 def converte(t):
     i=0
-    nh=len(cabe.search(t).group(2))
-    t=re.sub(cabe,rf"<h{nh}>\g<3></h{nh}>",t)
+    t=re.sub(cabe,cabesub,t)
     t=re.sub(bold,r"<b>\2</b>",t)
     t=re.sub(ita,r"<i>\2</i>",t)
     t=re.sub(im,r'<img src="\3" alt="\2"/>',t)
