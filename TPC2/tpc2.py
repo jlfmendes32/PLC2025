@@ -4,8 +4,8 @@ import sys
 
 cabe=re.compile(r'(?P<cabeçalho>(#+)\s*(.*))')
 im=re.compile(r'(?P<img>!\[(.*)\]\((.*)\))')
-bold=re.compile(r'(?P<bold>\*\*(.*)\*\*)')
-ita=re.compile(r'(?P<ita>\*(.*)\*)')
+bold=re.compile(r'(?P<bold>\*\*(.+)\*\*)')
+ita=re.compile(r'(?P<ita>\*(.+)\*)')
 lik=re.compile(r'(?P<link>\[(.*)\]\((.*)\))')
 ListaNum=re.compile(r'(?P<lista>((\d+\.)\s*(.+)+))')
 
