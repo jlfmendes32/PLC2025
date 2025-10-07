@@ -19,9 +19,8 @@ def main():
 import sys
 import re
 
-def tokenize(input_string):
+def tokenize(input_string,linha):
     reconhecidos = []
-    linha = 1
     mo = re.finditer(r'{tokens_regex}', input_string)
     for m in mo:
         dic = m.groupdict()
@@ -40,9 +39,11 @@ def tokenize(input_string):
         if not dic['SKIP'] and t[0] != 'UNKNOWN': reconhecidos.append(t)
     return reconhecidos
 
+l=1
 for linha in sys.stdin:
-    for tok in tokenize(linha):
-        print(tok)    
+    for tok in tokenize(linha,l):
+        print(tok)
+    l+=1    
 """
         print(code)
 
