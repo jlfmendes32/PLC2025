@@ -20,12 +20,20 @@
         "expreg": "\\?\\w+"
     },
     {
-        "id": "ID",
-        "expreg": "(\\w* ?)*:\\w+"
+        "id": "ABREV",
+        "expreg": "a"
     },
     {
-        "id": "NAME",
-        "expreg": "\"(\\w+ ?)+\"@\\w+"
+        "id": "ID",
+        "expreg": "\\w*:\\w+"
+    },
+    {
+        "id": "LSTRING",
+        "expreg": "\"(\\w+ ?)+\""
+    },
+    {
+        "id": "LTAG",
+        "expreg": "@\\w+"
     },
     {
         "id": "PONTO",
@@ -41,7 +49,7 @@
     },
     {
         "id": "SKIP",
-        "expreg": "[ \\t]"
+        "expreg": "( )|(\\t)|(#.*\\n)"
     },
     {
         "id": "NEWLINE",

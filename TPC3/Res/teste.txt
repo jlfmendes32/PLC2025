@@ -5,6 +5,8 @@ SELECT ?a ?b ?c WHERE
     ?a :eIrmaoDe  ?c.
   }
 
+# DBPedia: obras de Chuck Berry
+
 select ?nome ?desc where {
     ?s a dbo:MusicalArtist.
     ?s foaf:name "Chuck Berry"@en .
