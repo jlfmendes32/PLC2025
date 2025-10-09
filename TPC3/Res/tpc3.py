@@ -4,7 +4,7 @@ import re
 
 def tokenize(input_string,linha):
     reconhecidos = []
-    mo = re.finditer(r'(?P<S>SELECT)|(?P<W>WHERE)|(?P<VAR>\?\w+)|(?P<ID>\w*:\w+)|(?P<PONTO>\.)|(?P<PA>\{)|(?P<PF>\})|(?P<SKIP>[ \t])|(?P<NEWLINE>\n)|(?P<ERRO>.)', input_string)
+    mo = re.finditer(r'(?P<S>SELECT|select)|(?P<W>WHERE|where)|(?P<LIM>LIMIT|limit)|(?P<INT>\d+)|(?P<VAR>\?\w+)|(?P<ID>(\w* ?)*:\w+)|(?P<NAME>"(\w+ ?)+"@\w+)|(?P<PONTO>\.)|(?P<PA>\{)|(?P<PF>\})|(?P<SKIP>[ \t])|(?P<NEWLINE>\n)|(?P<ERRO>.)', input_string)
     for m in mo:
         dic = m.groupdict()
         if dic['S']:
@@ -13,11 +13,20 @@ def tokenize(input_string,linha):
         elif dic['W']:
             t = ("W", dic['W'], linha, m.span())
     
+        elif dic['LIM']:
+            t = ("LIM", dic['LIM'], linha, m.span())
+    
+        elif dic['INT']:
+            t = ("INT", dic['INT'], linha, m.span())
+    
         elif dic['VAR']:
             t = ("VAR", dic['VAR'], linha, m.span())
     
         elif dic['ID']:
             t = ("ID", dic['ID'], linha, m.span())
+    
+        elif dic['NAME']:
+            t = ("NAME", dic['NAME'], linha, m.span())
     
         elif dic['PONTO']:
             t = ("PONTO", dic['PONTO'], linha, m.span())

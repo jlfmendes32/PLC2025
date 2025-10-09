@@ -1,11 +1,19 @@
 [
     {
         "id": "S",
-        "expreg": "SELECT"
+        "expreg": "SELECT|select"
     },
     {
         "id": "W",
-        "expreg": "WHERE"
+        "expreg": "WHERE|where"
+    },
+    {
+        "id": "LIM",
+        "expreg": "LIMIT|limit"
+    },
+    {
+        "id": "INT",
+        "expreg": "\\d+"
     },
     {
         "id": "VAR",
@@ -13,7 +21,11 @@
     },
     {
         "id": "ID",
-        "expreg": "\\w*:\\w+"
+        "expreg": "(\\w* ?)*:\\w+"
+    },
+    {
+        "id": "NAME",
+        "expreg": "\"(\\w+ ?)+\"@\\w+"
     },
     {
         "id": "PONTO",

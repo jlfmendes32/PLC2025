@@ -1,6 +1,14 @@
 SELECT ?a ?b ?c WHERE
   {
     ?a Rdf:sus :Pessoa
-    ?a :temIdadeSELECT  ?b.
+    ?a :temIdade ?b.
     ?a :eIrmaoDe  ?c.
   }
+
+select ?nome ?desc where {
+    ?s a dbo:MusicalArtist.
+    ?s foaf:name "Chuck Berry"@en .
+    ?w dbo:artist ?s.
+    ?w foaf:name ?nome.
+    ?w dbo:abstract ?desc
+} LIMIT 1000
