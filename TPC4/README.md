@@ -1,6 +1,6 @@
 ### Analisador Léxico de Queery
 
-[Resolução](https://github.com/jlfmendes32/PLC2025/blob/main/TPC3/Res/tpc3.py)
+[Resolução](https://github.com/jlfmendes32/PLC2025/blob/main/TPC4/Res/tpc4.py)
 
 Resumo:
 

@@ -1,0 +1,32 @@
+[
+    {
+        "cod": "A01",
+        "nome": "água 0.5L",
+        "quant": 3,
+        "preco": 0.7
+    },
+    {
+        "cod": "A02",
+        "nome": "água 1.0L",
+        "quant": 5,
+        "preco": 1.0
+    },
+    {
+        "cod": "A03",
+        "nome": "fatia de pizza",
+        "quant": 8,
+        "preco": 3.0
+    },
+    {
+        "cod": "A04",
+        "nome": "nutella",
+        "quant": 8,
+        "preco": 5.0
+    },
+    {
+        "cod": "A05",
+        "nome": "pão com chouriço",
+        "quant": 8,
+        "preco": 2.5
+    }
+]
