@@ -121,6 +121,7 @@ def t_moedas_coins(r):
 def t_ANY_error(t): # regra válida para todos os estados
     print(f"Carácter ilegal: {t.value[0]}")
     t.lexer.begin('INITIAL')
+    t.lexer.erro=True
     t.lexer.skip(1)
     return t
 
@@ -128,7 +129,7 @@ def t_ANY_error(t): # regra válida para todos os estados
 
 lexer = lex.lex()
 lexer.sair = False
-
+lexer.erro = False
 #################
 
 
@@ -154,5 +155,8 @@ while True:
     if teve_moedas:
          print(f"saldo={int(int(saldo/100))}e{int(saldo)%100}c")
     tok.lexer.begin('INITIAL')
+    if lexer.erro:
+        print("Comando não aplicável")
+        break
     if lexer.sair:
         break
