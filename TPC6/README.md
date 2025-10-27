@@ -6,11 +6,11 @@ Resumo:
 
 Construiu-se um parser usando a seguinte gramática:
 
-p1: Exp → T ExpL
-p2: ExpL → Op T
-p3:      | eps
-p4: T → F ExpL
-p5: F → num
+p1: Exp → T ExpL\n
+p2: ExpL → Op T\n
+p3:      | eps\n
+p4: T → F ExpL\n
+p5: F → num\n
 p6:   | '(' Exp ')'
 
 E tomando por base o exemplo disponibilizado na Blackboard.
