@@ -1,6 +1,6 @@
 ### Parser para expressões aritméticas (Recursivo Descendente)
 
-[Resolução](https://github.com/jlfmendes32/PLC2025/blob/main/TPC5/parser.py)
+[Resolução](https://github.com/jlfmendes32/PLC2025/blob/main/TPC6/parser.py)
 
 Resumo:
 
